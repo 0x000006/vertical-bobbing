@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "vertical-bobbing",
+  "version": "${version}",
+  "name": "Vertical Bobbing",
+  "description": "Brings back vertical view bobbing from Minecraft<=1.13.2 (MC-225335).",
+  "authors": [ "0x06" ],
+  "contact": {
+    "repo": "https://github.com/0x000006/vertical-bobbing",
+    "issues": "https://github.com/0x000006/vertical-bobbing/issues",
+    "sources": "https://github.com/0x000006/vertical-bobbing"
+  },
+  "license": "MIT",
+  "icon": "assets/vertical-bobbing/icon.png",
+  "environment": "client",
+  "mixins": [ "vertical-bobbing.mixins.json" ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=${minecraft_version}"
+  }
+}
