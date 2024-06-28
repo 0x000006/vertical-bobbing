@@ -4,7 +4,7 @@ import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.Vec3f;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,7 +20,7 @@ public class GameRendererMixin {
         IPlayerEntityExtension playerExtension = (IPlayerEntityExtension) playerEntity;
         float i = MathHelper.lerp(tickDelta, playerExtension.getLastVerticalSpeed(), playerExtension.getVerticalSpeed());
         i = (i * 0.5f) - i;
-        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(i * 5f));
+        matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(i * 5f));
     }
 
 }
