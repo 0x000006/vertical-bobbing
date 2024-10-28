@@ -5,7 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "client": [
     "GameRendererMixin",
-    "PlayerEntityMixin"
+    "MinecraftClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
