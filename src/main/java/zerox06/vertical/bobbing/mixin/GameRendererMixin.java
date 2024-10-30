@@ -32,7 +32,7 @@ public class GameRendererMixin {
                 return;
             }
 
-            verticalSpeed = (float) (camEntity.getY() - camEntity.prevY);
+            verticalSpeed = camEntity.isOnGround() ? 0 : (float) (camEntity.getVelocity().y);
         };
     }
 
