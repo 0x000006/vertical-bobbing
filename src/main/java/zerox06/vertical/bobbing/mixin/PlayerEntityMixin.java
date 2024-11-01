@@ -18,7 +18,7 @@ public abstract class PlayerEntityMixin extends LivingEntity implements LivingEn
     @Inject(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;setMovementSpeed(F)V", shift = At.Shift.AFTER))
     void afterSetMovementSpeed(CallbackInfo ci) {
         float f;
-        if (!this.onGround && this.getHealth() > 0.0f) {
+        if (!this.isOnGround() && this.getHealth() > 0.0f) {
             f = (float) (Math.atan(-this.getVelocity().y * (double) 0.2f) * 15.0);
         } else {
             f = 0.0f;
